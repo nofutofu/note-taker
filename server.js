@@ -45,7 +45,14 @@ app.post('/api/notes', (req, res) => {
 app.get('/api/notes', (req, res) => res.sendFile(path.join(__dirname, './db/db.json')));
 
 app.delete('/api/notes/:id', (req, res) => {
-    console.log(req.method);
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        let parsedData = JSON.parse(data);
+        const deleted = parsedData.find(data => data.id === req.params.id)
+        if (deleted) {
+            parsedData = parsedData.filter(data => data.id != req.params.id)
+        }
+        writeToJson('./db/db.json', parsedData);
+    });
 });
 
 app.listen(PORT, () => console.log(`App is listening at http://localhost:${PORT}`));
