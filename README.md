@@ -5,7 +5,7 @@
 
 ## Links
 
-- [Live](<https://note-take-challenge.herokuapp.com/notes> "Live View")
+- [Live](<https://note-take-challenge.herokuapp.com> "Live View")
 
 ## Screenshots
 
