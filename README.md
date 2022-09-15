@@ -5,7 +5,7 @@
 
 ## Links
 
-- [Live](<https://nofutofu.github.io/note-taker/> "Live View")  /// unsure yet
+- [Live](<https://note-take-challenge.herokuapp.com/notes> "Live View")
 
 ## Screenshots
 
